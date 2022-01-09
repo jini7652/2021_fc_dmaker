@@ -1,18 +1,23 @@
 package com.fastcampus.programming.dmaker.exception;
 
+import lombok.Getter;
+
+@Getter
 public class DMakerException extends RuntimeException {
-    private DmakerErrorCode dmakerErrorCode;
+    private DmakerErrorCode dMakerErrorCode;
     private String detailMessage;
 
-    public DMakerException(DmakerErrorCode errorCode) {
-        super(errorCode.getMessage());
-        this.dmakerErrorCode = errorCode;
-        this.detailMessage = errorCode.getMessage();
+    public DMakerException(DmakerErrorCode dMakerErrorCode) {
+        super(dMakerErrorCode.getMessage());
+        this.dMakerErrorCode = dMakerErrorCode;
+        this.detailMessage = dMakerErrorCode.getMessage();
     }
 
-    public DMakerException(DmakerErrorCode errorCode, String detailMessage) {
+    public DMakerException(
+            DmakerErrorCode dMakerErrorCode
+            , String detailMessage) {
         super(detailMessage);
-        this.dmakerErrorCode = errorCode;
+        this.dMakerErrorCode = dMakerErrorCode;
         this.detailMessage = detailMessage;
     }
 }

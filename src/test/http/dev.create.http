@@ -4,9 +4,9 @@ Content-Type: application/json
 
 {
   "developerLevel": "SENIOR",
-  "developerSkillType": "BACK_END",
+  "developerSkillType": "FRONT_END",
   "experienceYear": 12,
-  "memberId": "mini",
-  "name": "mouse kim",
+  "memberId": "Mini",
+  "name": "mouse",
   "age": 32
 }
