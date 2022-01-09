@@ -65,23 +65,24 @@ public class DMakerController {
         return dMakerService.deleteDeveloer(memberId);
     }
 
-    /**
-     * Controller Global Exception Control
-     * @param e
-     * @param request
-     * @return
-     */
-//    @ResponseStatus(value = HttpStatus.CONFLICT)
-    @ExceptionHandler(DMakerException.class)
-    public DMakerErrorResponse handleException(
-            DMakerException e,
-            HttpServletRequest request
-    ) {
-        log.error("errorCode: {}, url: {}, message: {}", e.getDMakerErrorCode(), request.getRequestURI(), e.getDetailMessage());
-        return DMakerErrorResponse.builder()
-                .errorCode(e.getDMakerErrorCode())
-                .errorMessage(e.getDetailMessage())
-                .build();
-    }
+//    /**
+//     * Controller Global Exception Control - 2022.01.09
+//     * exception > DMakerExcptionHandler로 이동
+//     * @param e
+//     * @param request
+//     * @return
+//     */
+////    @ResponseStatus(value = HttpStatus.CONFLICT)
+//    @ExceptionHandler(DMakerException.class)
+//    public DMakerErrorResponse handleException(
+//            DMakerException e,
+//            HttpServletRequest request
+//    ) {
+//        log.error("errorCode: {}, url: {}, message: {}", e.getDMakerErrorCode(), request.getRequestURI(), e.getDetailMessage());
+//        return DMakerErrorResponse.builder()
+//                .errorCode(e.getDMakerErrorCode())
+//                .errorMessage(e.getDetailMessage())
+//                .build();
+//    }
 
 }
